@@ -41,5 +41,4 @@ func ChangeAvatar(authToken string, avatarID string){
 	formattedData := formatJSON(respBody)
 	fmt.Println("Status:", resp.Status)
 	fmt.Println("Response body:", formattedData)
-	}
-	
+}
