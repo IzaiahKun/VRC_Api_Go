@@ -6,6 +6,7 @@ import (
 
 var authCookie string
 var avatarID string
+var userID string
 
 var (
 	Username string
@@ -38,17 +39,25 @@ func main() {
 	
 	fmt.Println("Enter the 2FA email OTP code: ")
 	fmt.Scan(&code)
-		VerifyEmailOTP(code)
+	VerifyEmailOTP(code)
 		
-		for {
-			fmt.Println("Enter the Avatar ID you want to select: ")
-			fmt.Scan(&avatarID)
+	for {
+		/*
+		fmt.Println("Enter the Avatar ID you want to select: ")
+		fmt.Scan(&avatarID)
 			
-			ChangeAvatar(authCookie, avatarID)
+		ChangeAvatar(authCookie, avatarID)
 		
-			fmt.Println("Select a different Avatar? Enter 'y' to continue, 'n' to exit program: ")
-			fmt.Scan(&choice)
-			if choice != "y" {
+	*/
+		fmt.Println("input userID | ")
+		fmt.Scan(&userID)
+		
+		sendFriendRq(authCookie, userID)
+	
+		fmt.Println("Select a different Avatar? Enter 'y' to continue, 'n' to exit program: ")
+		fmt.Scan(&choice)
+	
+		if choice != "y" {
 			fmt.Println("Exiting program.")
 			return
 		}
