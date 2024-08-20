@@ -46,7 +46,7 @@ func sendFriendRq(authToken string, userID string){
 	
 }
 
-func cancelFriendrq(authToken string, userID string){
+func cancelFriendRq(authToken string, userID string){
 	
 	cancelFriendrqApiURl := "https://vrchat.com/api/1/user/" + userID + "/friendRequest"
 	
