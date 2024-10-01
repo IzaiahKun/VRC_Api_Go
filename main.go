@@ -7,6 +7,7 @@ import (
 var authCookie string
 var authToken string
 var avatarID string
+var userID string
 
 var (
 	Username string
@@ -50,13 +51,12 @@ func main() {
 
 	for {
 		if loginSessionCheck(authToken) {
-			fmt.Println("Login session is valid")
 			break
 		}
-
 		fmt.Println("Enter the 2FA email OTP code: ")
 		fmt.Scan(&code)
 		VerifyEmailOTP(code)
+		break
 	}
 
 	fmt.Println("input AvatarID | ")
