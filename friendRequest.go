@@ -6,8 +6,6 @@ import (
 	"net/http"
 )
 
-var userID string
-
 func sendFriendRq(userID string) {
 	authToken, err := loadAuthToken()
 	if err != nil {
